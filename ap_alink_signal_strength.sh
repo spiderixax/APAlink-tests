@@ -21,7 +21,7 @@ while true; do
         SET_BITRATE=20000
     fi
     if [ "$SET_BITRATE" -ne "$LAST_RATE" ]; then
-        curl -s "http://localhost/api/v1/set?video0.bitrate=$SET_BITRATE"
+        wget -q "http://localhost/api/v1/set?video0.bitrate=$SET_BITRATE"
     fi
     LAST_RATE=$SET_BITRATE
     sleep 0.1
